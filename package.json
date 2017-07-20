@@ -2,7 +2,7 @@
   "name": "prosemirror-dropcursor",
   "version": "0.21.0",
   "description": "Drop cursor plugin for ProseMirror",
-  "main": "dist/dropcursor.js",
+  "main": "src/dropcursor.js",
   "license": "MIT",
   "maintainers": [
     {
