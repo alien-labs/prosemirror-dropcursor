@@ -88,7 +88,7 @@ function pluginStateFor(state, pos, options) {
   if (!deco) {
     let node = document.createElement("span")
     node.textContent = "\u200b"
-    node.style.cssText = style(options, "left") + "; display: inline-block; pointer-events: none"
+    node.style.cssText = style(options, "top") + "; display: inline-block; pointer-events: none"
     deco = Decoration.widget(pos, node)
   }
   return {pos, deco: DecorationSet.create(state.doc, [deco])}
