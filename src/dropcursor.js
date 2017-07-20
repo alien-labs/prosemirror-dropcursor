@@ -78,9 +78,9 @@ function pluginStateFor(state, pos, options) {
   if (!$pos.parent.inlineContent) {
     let before, after
     if (before = $pos.nodeBefore)
-      deco = Decoration.node(pos - before.nodeSize, pos, {nodeName: "div", style: style(options, "right")})
+      deco = Decoration.node(pos - before.nodeSize, pos, {nodeName: "div", style: style(options, "bottom")})
     else if (after = $pos.nodeAfter)
-      deco = Decoration.node(pos, pos + after.nodeSize, {nodeName: "div", style: style(options, "left")})
+      deco = Decoration.node(pos, pos + after.nodeSize, {nodeName: "div", style: style(options, "top")})
   }
   if (!deco) {
     let node = document.createElement("span")
