@@ -1,4 +1,4 @@
-const {Plugin} = require("prosemirror-state")
+const {Plugin, PluginKey} = require("prosemirror-state")
 const {Decoration, DecorationSet} = require("prosemirror-view")
 
 const gecko = typeof navigator != "undefined" && /gecko\/\d/i.test(navigator.userAgent)
@@ -17,7 +17,10 @@ function dropCursor(options) {
     }, 1000)
   }
 
+  const dropCursorKey = new PluginKey("dropCursor")
+
   let plugin = new Plugin({
+    key: dropCursorKey,
     state: {
       init() { return null },
       apply(tr, prev, state) {
